@@ -26,7 +26,7 @@ const Main = () => {
 
   const [movies, setMovies] = useState([])
 
-  const movie = movies[Math.floor(Math.random() * movies.length)]
+  const movie: Imovie = movies[Math.floor(Math.random() * movies.length)]
 
   const trimText = (str: string, len: number) => {
     // trim string length
@@ -49,7 +49,7 @@ const Main = () => {
             <button className='border bg-gray-300 text-black border-gray-300 py-2 px-5'>Play</button>
             <button className='border text-whit e border-gray-300 py-2 px-5 ml-4'>Watch Later</button>
           </div>
-          <p className='text-gray-400 text-sm'>Released: {movie?.release_date}</p>
+          <p className='text-gray-400 text-sm'>{`Released: ${movie?.release_date}`}</p>
           <p className='w-full md:max-w-[70%] lg:max-w-[70%] xl:max-w-[35%] text-gray-200 '>{trimText(movie?.overview, 10)}</p>
 
          </div>
